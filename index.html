@@ -1,108 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="/public/sagedining/assets/temp/microsites_main.f8ce05d81664987472.css" type="text/css"/>
-    <meta charset="UTF-8">
-    <title>SAGE Dining Services</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+/* a, .menu, h2 {
+  visibility: hidden;
+}
+*/
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/w3images/pizza.jpg");
+  min-height: 90%;;
+}
+</style>
 </head>
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px">THE HIES LUNCH MENU</h1>
+   <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"><div id="weekend"></div></h1>
+    <h2 class="w3-center w3-xlarge" style="margin-bottom:-10px">Made by Jack Underwood</h2>
+    <!-- <h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px">Today's Special is</h2> -->
+    <h2 class="w3-center w3-jum" style="margin-bottom:64px"><div class="special"></div></h2>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Main Food</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">SIDES AND VEGETABLES</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Deli and Soup</div>
+      </a>
+    </div>
+
+<!--MAIN-->
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      
+      <h1><b><div class="main0"></div></b></h1>
+      <p class="w3-text-grey"><div class="maining0"></div></p>
+      <hr>
+   
+      <h1><b><div class="main1"></div></b></h1>
+      <p class="w3-text-grey"><div class="maining1"></div></p>
+      <hr>
+      
+      <h1><b><div class="main2"></div></b></h1>
+      <p class="w3-text-grey"><div class="maining2"></div></p>
+      <hr>
+
+      <h1><b><div class="main3"></div></b></h1>
+      <p class="w3-text-grey"><div class="maining3"></div></p>
+      <hr>
+    </div>
+
+    <!--SIDES-->
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b><div class="side0"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing0"></div></p>
+      <hr>
     
+      <h1><b><div class="side1"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing1"></div></p>
+      <hr>
+      
+      <h1><b><div class="side2"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing2"></div></p>
+      <hr>
+    
+      <h1><b><div class="side3"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing3"></div></p>
+      <hr>
+      
+      <h1><b><div class="side4"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing4"></div></p>
+      <hr>
+      
+      <h1><b><div class="side5"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing5"></div></p>
+      <hr>
+      
+      <h1><b><div class="side6"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing6"></div></p>
+      <hr>
+      
+      <h1><b><div class="side7"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing7"></div></p>
+      <hr>
+      
+      <h1><b><div class="side8"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing8"></div></p>
+      <hr>
+      
+      <h1><b><div class="side9"></div></b></h1>
+      <p class="w3-text-grey"><div class="sideing9"></div></p>
+      <hr>
+      
+    </div>
+
+ <!--DELI AND SOUP -->
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Coded by Jack Underwood</p>
+</footer>
+
+<script>
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-red";
+  }
+  document.getElementById("myLink").click();
+  </script>
+<script>
+const today = new Date();
+const yyyy = today.getFullYear();
+let mm = today.getMonth() + 1; // Months start at 0!
+let dd = today.getDate();
+
+if (dd < 10) dd = '0' + dd;
+if (mm < 10) mm = '0' + mm;
+
+const formattedToday = mm + '/' + '03' + '/' + yyyy; //REMOVE 27 AND PUT DD LATER
+console.log(formattedToday)
+var todayy = new Date();
+if(todayy.getDay() == 6 || todayy.getDay() == 0) var weekend = true;
+console.log(weekend)
+var mylink = "https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
+console.log(mylink)
+$.getJSON(mylink, function(data) {
+
+  //special
+ // var special = `${data.Specials[0].name}`
+
+//main
+var main0 = `${data["Entrées"][0].name}`
+var maining0 = `${data["Entrées"][0].displayStation}`
+var main1 = `${data["Entrées"][1].name}`
+var maining1 = `${data["Entrées"][1].displayStation}`
+var main2 = `${data["Entrées"][2].name}`
+var maining2 = `${data["Entrées"][2].displayStation}`
+var main3 = `${data["Entrées"][3].name}`
+var maining3 = `${data["Entrées"][3].displayStation}`
+
+//sides
+var side0 = `${data["Sides and Vegetables"][0]?.name}`
+var sideing0 = `${data["Sides and Vegetables"][0]?.displayStation}`
+var side1 = `${data["Sides and Vegetables"][1]?.name}`
+var sideing1 = `${data["Sides and Vegetables"][1]?.displayStation}`
+var side2 = `${data["Sides and Vegetables"][2]?.name}`
+var sideing2 = `${data["Sides and Vegetables"][2]?.displayStation}`
+var side3 = `${data["Sides and Vegetables"][3]?.name}`
+var sideing3 = `${data["Sides and Vegetables"][3]?.displayStation}`
+var side4 = `${data["Sides and Vegetables"][4]?.name}`
+var sideing4 = `${data["Sides and Vegetables"][4]?.displayStation}`
+var side5 = `${data["Sides and Vegetables"][5]?.name}`
+var sideing5 = `${data["Sides and Vegetables"][5]?.displayStation}`
+var side6 = `${data["Sides and Vegetables"][6]?.name}`
+var sideing6 = `${data["Sides and Vegetables"][6]?.displayStation}`
+var side7 = `${data["Sides and Vegetables"][7]?.name}`
+var sideing7 = `${data["Sides and Vegetables"][7]?.displayStation}`
+var side8 = `${data["Sides and Vegetables"][8]?.name}`
+var sideing8 = `${data["Sides and Vegetables"][8]?.displayStation}`
+var side9 = `${data["Sides and Vegetables"][9]?.name}`
+var sideing9 = `${data["Sides and Vegetables"][9]?.displayStation}`
+
+
+//special
+//$(".special").html(special);
+
+//main
+$(".main0").html(main0);
+$(".maining0").html(maining0);
+$(".main1").html(main1);
+$(".maining1").html(maining1);
+$(".main2").html(main2);
+$(".maining2").html(maining2);
+$(".main3").html(main3);
+$(".maining3").html(maining3);
+
+//sides
+$(".side0").html(side0);
+$(".sideing0").html(sideing0);
+$(".side1").html(side1);
+$(".sideing1").html(sideing1);
+$(".side2").html(side2);
+$(".sideing2").html(sideing2);
+$(".side3").html(side3);
+$(".sideing3").html(sideing3);
+$(".side4").html(side4);
+$(".sideing4").html(sideing4);
+$(".side5").html(side5);
+$(".sideing5").html(sideing5);
+$(".side6").html(side6);
+$(".sideing6").html(sideing6);
+
+if (typeof side7 !== 'undefined'){
+  return;
+} else {
+  $(".side7").html(side7);
+  $(".sideing7").html(sideing7);
+}
+
+if (typeof side8 !== 'undefined'){
+  return;
+} else {
+  $(".side8").html(side8);
+  $(".sideing8").html(sideing8);
+}
+if (typeof side9 !== 'undefined'){
+  return;
+} else {
+  $(".side9").html(side9);
+  $(".sideing9").html(sideing9);
+}
+
+//Deli and Soup
+$(".sideing6").html(sideing6);
+});
+</script>
 </body>
 </html>
-<script>
-!function(l) {
-    function e(e) {
-        for (var r, t, n = e[0], o = e[1], u = e[2], f = 0, i = []; f < n.length; f++)
-            t = n[f],
-            p[t] && i.push(p[t][0]),
-            p[t] = 0;
-        for (r in o)
-            Object.prototype.hasOwnProperty.call(o, r) && (l[r] = o[r]);
-        for (s && s(e); i.length;)
-            i.shift()();
-        return c.push.apply(c, u || []), a()
-    }
-    function a() {
-        for (var e, r = 0; r < c.length; r++) {
-            for (var t = c[r], n = !0, o = 1; o < t.length; o++) {
-                var u = t[o];
-                0 !== p[u] && (n = !1)
-            }
-            n && (c.splice(r--, 1), e = f(f.s = t[0]))
-        }
-        return e
-    }
-    var t = {},
-        p = {
-            1: 0
-        },
-        c = [];
-    function f(e) {
-        if (t[e])
-            return t[e].exports;
-        var r = t[e] = {
-            i: e,
-            l: !1,
-            exports: {}
-        };
-        return l[e].call(r.exports, r, r.exports, f), r.l = !0, r.exports
-    }
-    f.m = l,
-    f.c = t,
-    f.d = function(e, r, t) {
-        f.o(e, r) || Object.defineProperty(e, r, {
-            enumerable: !0,
-            get: t
-        })
-    },
-    f.r = function(e) {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-            value: "Module"
-        }),
-        Object.defineProperty(e, "__esModule", {
-            value: !0
-        })
-    },
-    f.t = function(r, e) {
-        if (1 & e && (r = f(r)), 8 & e)
-            return r;
-        if (4 & e && "object" == typeof r && r && r.__esModule)
-            return r;
-        var t = Object.create(null);
-        if (f.r(t), Object.defineProperty(t, "default", {
-            enumerable: !0,
-            value: r
-        }), 2 & e && "string" != typeof r)
-            for (var n in r)
-                f.d(t, n, function(e) {
-                    return r[e]
-                }.bind(null, n));
-        return t
-    },
-    f.n = function(e) {
-        var r = e && e.__esModule ? function() {
-            return e.default
-        } : function() {
-            return e
-        };
-        return f.d(r, "a", r), r
-    },
-    f.o = function(e, r) {
-        return Object.prototype.hasOwnProperty.call(e, r)
-    },
-    f.p = "/";
-    var r = window.webpackJsonp = window.webpackJsonp || [],
-        n = r.push.bind(r);
-    r.push = e,
-    r = r.slice();
-    for (var o = 0; o < r.length; o++)
-        e(r[o]);
-    var s = n;
-    a()
-}([])
-</script>
-<script type='text/javascript' src='/public/sagedining/assets/temp/microsites_main.965ef2c01664990607.js'></script>
-<script type='text/javascript' src='/public/sagedining/assets/temp/microsites_main.965ef2c0.js.LICENSE.1664990607.js'></script>
-
