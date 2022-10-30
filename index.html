@@ -214,7 +214,7 @@ console.log(formattedToday)
 //  document.getElementById(h2).style.display = 'hidden';
  // console.log("ITSA WEEKEND GET OFF MY WEBSITE BOZO")
 //}
-var mylink = "https://jackunderwoodproxy.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
+var mylink = "https://proxy.cors.sh/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
 console.log(mylink)
 $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent(mylink) + '&callback=?', function(data){
 
