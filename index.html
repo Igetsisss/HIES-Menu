@@ -2,7 +2,7 @@
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<title>W3.CSS Template</title>
+<title>HIES Menu</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -31,6 +31,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
     <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px">THE HIES LUNCH MENU</h1>
    <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"><div id="weekend"></div></h1>
     <h2 class="w3-center w3-xlarge" style="margin-bottom:-10px">Made by Jack Underwood</h2>
+    <h2 class="w3-center w3-xxlarge" style="margin-bottom:-10px; font-style: italic;"><div class="jackiscool"></div></h2>
     <h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px"><div class="specialtitle"></div></h2>
     <h2 class="w3-center w3-jum" style="margin-bottom:64px"><div class="special"></div></h2>
     <div class="w3-row w3-center w3-border w3-border-dark-grey">
@@ -123,7 +124,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   <hr>
   
   <h1><b><div class="deli0"></div></b></h1>
-  <p class="w3-text-grey"><div class="deliing0">hello</div></p>
+  <p class="w3-text-grey"><div class="deliing0"></div></p>
   <hr>
 
   <h1><b><div class="deli1"></div></b></h1>
@@ -143,7 +144,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   <hr>
   
 </div>
-
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
   <p>Coded by Jack Underwood</p>
@@ -171,18 +171,27 @@ const today = new Date();
 const yyyy = today.getFullYear();
 let mm = today.getMonth() + 1; // Months start at 0!
 let dd = today.getDate();
-
+var todayy = new Date();
 if (dd < 10) dd = '0' + dd;
 if (mm < 10) mm = '0' + mm;
-
-const formattedToday = mm + '/' + '27' + '/' + yyyy; //REMOVE 27 AND PUT DD LATER
-console.log(formattedToday)
-var todayy = new Date();
-if(todayy.getDay() == 6 || todayy.getDay() == 0){ 
+if(todayy.getDay() == 6) { 
   var weekend = `true`;
+  var dddd = dd + 2;
+  let message0 = `It's Saturday so this is the Menu for Monday`
+  $(".jackiscool").html(message0);
+} else if(todayy.getDay() == 0) {
+  var weekend = `true`;
+  var dddd = dd + 1;
+  let message = `It's Sunday so this is the Menu for Monday`
+  $(".jackiscool").html(message);
 } else {
   var weekend = `false`;
+  var dddd = dd;
 }
+
+const formattedToday = mm + '/' + dddd + '/' + yyyy; //REMOVE 27 AND PUT DD LATER
+console.log(formattedToday)
+
 //console.log("Is it a weeekend? " + weekend)
 //if (weekend === "true"){
 //  document.getElementById(a).style.display = 'hidden';
@@ -231,9 +240,8 @@ var sideing9 = `${data["Sides and Vegetables"][9]?.displayStation}`
 
 
 //special
-the_us_economy: if (special === "undefined"){
+if (special === "undefined"){
   console.log("There is no special")
-  break the_us_economy;
 } else {
   console.log(special)
   $(".special").html(special);
@@ -242,7 +250,6 @@ the_us_economy: if (special === "undefined"){
 
 // Deli and Soup
 var soup0 = `${data.Soups[0]?.name}`
-console.log(soup0);
 var souping0 = `${data.Soups[0]?.displayStation}`
 var soup1 = `${data.Soups[1]?.name}`
 var souping1 = `${data.Soups[1]?.displayStation}`
@@ -284,20 +291,20 @@ $(".side6").html(side6);
 $(".sideing6").html(sideing6);
 
 if (side7 === "undefined"){
-  return;
+  
 } else {
   $(".side7").html(side7);
   $(".sideing7").html(sideing7);
 }
 
 if (side8 === "undefined"){
-  return;
+  
 } else {
   $(".side8").html(side8);
   $(".sideing8").html(sideing8);
 }
 if (side9 === "undefined"){
-  return;
+  
 } else {
   $(".side9").html(side9);
   $(".sideing9").html(sideing9);
@@ -305,17 +312,19 @@ if (side9 === "undefined"){
 
 //Deli and Soup
 if (soup0 === "undefined"){
-  return;
+  
 } else {
   $(".soup0").html(soup0);
   $(".souping0").html(souping0);
 }
 if (soup1 === "undefined"){
-  return;
+  
 } else {
   $(".soup1").html(soup1);
   $(".souping1").html(souping1);
 }
+$(".soup0").html(soup0);
+$(".souping0").html(souping0);
 $(".deli0").html(deli0);
 $(".deliing0").html(deliing0);
 $(".deli1").html(deli1);
