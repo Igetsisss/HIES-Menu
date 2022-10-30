@@ -66,7 +66,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
     <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
       
-      <h1><b><div class="main0"></div></b></h1>
+      <h1><b><div class="main0">a</div></b></h1>
       <p class="w3-text-grey"><div class="maining0"></div></p>
       <hr>
    
@@ -229,25 +229,9 @@ console.log(mylink)
  //window.location.replace("http://fooderror.jackunderwood.org");
 	 // console.log("EROOR CANT GET LINK")
 //}
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
-async function demo() {
-    for (let i = 0; i < 5; i++) {
-        console.log(`Waiting ${i} seconds...`);
-        await sleep(i * 1000);
-    }
-    console.log('Done');
-    try{
-      console.log(loadingtime)
-    } catch(e){
-      console.log("its not there")
-    }
-    }
 $.get(mylink, function(data) {
 
-  var loadingtime = "true"
   //special
  var special = `${data.Specials[0]?.name}`
 //main
@@ -389,9 +373,16 @@ if (main0 === "undefined"){
 });
 </script>
 <script>
+const container = document.getElementById('main0');
 
-
-demo();
+try { if (container.textContent.includes('a')) {
+  console.log(' Melon is contained in element');
+} else {
+  console.log(' Melon is NOT contained in element');
+}
+} catch(e){
+  console.log("s")
+}
 </script>
 </body>
 </html>
