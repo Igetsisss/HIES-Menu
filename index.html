@@ -216,7 +216,7 @@ console.log(formattedToday)
 //}
 var mylink = "https://thingproxy.freeboard.io/fetch/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
 console.log(mylink)
-$.get(mylink, function(data) {
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent(mylink) + '&callback=?', function(data){
 
   //special
  var special = `${data.Specials[0]?.name}`
