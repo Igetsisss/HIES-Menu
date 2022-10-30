@@ -221,6 +221,11 @@ console.log(formattedToday)
 
 var mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
 console.log(mylink)
+try {
+  $get(mylink)
+} catch(err){
+  window.location.replace("http://fooderror.jackunderwood.org");
+}
 $.get(mylink, function(data) {
 
   //special
@@ -355,6 +360,9 @@ $(".deli3").html(deli3);
 $(".deliing3").html(deliing3);
 $(".deli4").html(deli4);
 $(".deliing4").html(deliing4);
+if (main0 === "undefined"){
+  alert("fuck me in the bum")
+}
 
 });
 </script>
