@@ -204,9 +204,9 @@ console.log(formattedToday)
 //  document.getElementById(h2).style.display = 'hidden';
  // console.log("ITSA WEEKEND GET OFF MY WEBSITE BOZO")
 //}
-var mylink = "https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
+var mylink = "https://cors-anywhere.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
 console.log(mylink)
-$.getJSON(mylink, function(data) {
+$.get(mylink, function(data) {
 
   //special
  var special = `${data.Specials[0]?.name}`
