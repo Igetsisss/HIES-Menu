@@ -66,7 +66,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
     <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
       
-      <h1><b><div class="main0">a</div></b></h1>
+      <h1><b><div class="main0"></div></b></h1>
       <p class="w3-text-grey"><div class="maining0"></div></p>
       <hr>
    
@@ -221,6 +221,7 @@ console.log(formattedToday)
 
 mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
 //mylink = "http://time.jsontest.com/"
+var istheresomething = `false`
 console.log(mylink)
 //try {
  // $.get(mylink);
@@ -364,15 +365,21 @@ $(".deliing3").html(deliing3);
 $(".deli4").html(deli4);
 $(".deliing4").html(deliing4);
 
-if (main0 === "undefined"){
+if (main0 == "undefined"){
   consolo.log("UHHHHHH")
 } else{
   console.log("there is something")
+  var istheresomething = `true`
 }
 
 });
 </script>
 <script>
+if (istheresomething == `true`){
+
+} else{
+  window.location.replace("http://fooderror.jackunderwood.org");
+}
 const container = document.getElementById('main0');
 
 try { if (container.textContent.includes('a')) {
