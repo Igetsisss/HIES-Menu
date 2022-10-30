@@ -31,7 +31,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
     <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px">THE HIES LUNCH MENU</h1>
    <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"><div id="weekend"></div></h1>
     <h2 class="w3-center w3-xlarge" style="margin-bottom:-10px">Made by Jack Underwood</h2>
-    <!-- <h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px">Today's Special is</h2> -->
+    <h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px"><div class="specialtitle"></div></h2>
     <h2 class="w3-center w3-jum" style="margin-bottom:64px"><div class="special"></div></h2>
     <div class="w3-row w3-center w3-border w3-border-dark-grey">
       <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
@@ -113,25 +113,37 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
  <!--DELI AND SOUP -->
 
-    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
-      <p class="w3-text-grey">Ask the waiter</p>
-      <hr>
-   
-      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
-      <hr>
-      
-      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
-      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
-      <hr>
-      
-      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
-      <p class="w3-text-grey">Tomatoes and mozzarella</p>
-    </div><br>
+ <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+  <h1><b><div class="soup0"></div></b></h1>
+  <p class="w3-text-grey"><div class="souping0"></div></p>
+  <hr>
 
-  </div>
+  <h1><b><div class="soup1"></div></b></h1>
+  <p class="w3-text-grey"><div class="souping1"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli0"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing0">hello</div></p>
+  <hr>
+
+  <h1><b><div class="deli1"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing1"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli2"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing2"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli3"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing3"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli4"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing4"></div></p>
+  <hr>
+  
 </div>
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
   <p>Coded by Jack Underwood</p>
@@ -163,27 +175,37 @@ let dd = today.getDate();
 if (dd < 10) dd = '0' + dd;
 if (mm < 10) mm = '0' + mm;
 
-const formattedToday = mm + '/' + '03' + '/' + yyyy; //REMOVE 27 AND PUT DD LATER
+const formattedToday = mm + '/' + '27' + '/' + yyyy; //REMOVE 27 AND PUT DD LATER
 console.log(formattedToday)
 var todayy = new Date();
-if(todayy.getDay() == 6 || todayy.getDay() == 0) var weekend = true;
-console.log(weekend)
+if(todayy.getDay() == 6 || todayy.getDay() == 0){ 
+  var weekend = `true`;
+} else {
+  var weekend = `false`;
+}
+//console.log("Is it a weeekend? " + weekend)
+//if (weekend === "true"){
+//  document.getElementById(a).style.display = 'hidden';
+//  document.getElementById(menu).style.display = 'hidden';
+//  document.getElementById(h2).style.display = 'hidden';
+ // console.log("ITSA WEEKEND GET OFF MY WEBSITE BOZO")
+//}
 var mylink = "https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
 console.log(mylink)
 $.getJSON(mylink, function(data) {
 
   //special
- // var special = `${data.Specials[0].name}`
+ var special = `${data.Specials[0]?.name}`
 
 //main
-var main0 = `${data["Entrées"][0].name}`
-var maining0 = `${data["Entrées"][0].displayStation}`
-var main1 = `${data["Entrées"][1].name}`
-var maining1 = `${data["Entrées"][1].displayStation}`
-var main2 = `${data["Entrées"][2].name}`
-var maining2 = `${data["Entrées"][2].displayStation}`
-var main3 = `${data["Entrées"][3].name}`
-var maining3 = `${data["Entrées"][3].displayStation}`
+var main0 = `${data["Entrées"][0]?.name}`
+var maining0 = `${data["Entrées"][0]?.displayStation}`
+var main1 = `${data["Entrées"][1]?.name}`
+var maining1 = `${data["Entrées"][1]?.displayStation}`
+var main2 = `${data["Entrées"][2]?.name}`
+var maining2 = `${data["Entrées"][2]?.displayStation}`
+var main3 = `${data["Entrées"][3]?.name}`
+var maining3 = `${data["Entrées"][3]?.displayStation}`
 
 //sides
 var side0 = `${data["Sides and Vegetables"][0]?.name}`
@@ -209,7 +231,31 @@ var sideing9 = `${data["Sides and Vegetables"][9]?.displayStation}`
 
 
 //special
-//$(".special").html(special);
+the_us_economy: if (special === "undefined"){
+  console.log("There is no special")
+  break the_us_economy;
+} else {
+  console.log(special)
+  $(".special").html(special);
+  $(".specialtitle").html("Today's Special is");
+}
+
+// Deli and Soup
+var soup0 = `${data.Soups[0]?.name}`
+console.log(soup0);
+var souping0 = `${data.Soups[0]?.displayStation}`
+var soup1 = `${data.Soups[1]?.name}`
+var souping1 = `${data.Soups[1]?.displayStation}`
+var deli0 = `${data.Deli[0]?.name}`
+var deliing0 = `${data.Deli[0]?.displayStation}`
+var deli1 = `${data.Deli[1]?.name}`
+var deliing1 = `${data.Deli[1]?.displayStation}`
+var deli2 = `${data.Deli[2]?.name}`
+var deliing2 = `${data.Deli[2]?.displayStation}`
+var deli3 = `${data.Deli[3]?.name}`
+var deliing3 = `${data.Deli[3]?.displayStation}`
+var deli4 = `${data.Deli[4]?.name}`
+var deliing4 = `${data.Deli[4]?.displayStation}`
 
 //main
 $(".main0").html(main0);
@@ -237,20 +283,20 @@ $(".sideing5").html(sideing5);
 $(".side6").html(side6);
 $(".sideing6").html(sideing6);
 
-if (typeof side7 !== 'undefined'){
+if (side7 === "undefined"){
   return;
 } else {
   $(".side7").html(side7);
   $(".sideing7").html(sideing7);
 }
 
-if (typeof side8 !== 'undefined'){
+if (side8 === "undefined"){
   return;
 } else {
   $(".side8").html(side8);
   $(".sideing8").html(sideing8);
 }
-if (typeof side9 !== 'undefined'){
+if (side9 === "undefined"){
   return;
 } else {
   $(".side9").html(side9);
@@ -258,7 +304,29 @@ if (typeof side9 !== 'undefined'){
 }
 
 //Deli and Soup
-$(".sideing6").html(sideing6);
+if (soup0 === "undefined"){
+  return;
+} else {
+  $(".soup0").html(soup0);
+  $(".souping0").html(souping0);
+}
+if (soup1 === "undefined"){
+  return;
+} else {
+  $(".soup1").html(soup1);
+  $(".souping1").html(souping1);
+}
+$(".deli0").html(deli0);
+$(".deliing0").html(deliing0);
+$(".deli1").html(deli1);
+$(".deliing1").html(deliing1);
+$(".deli2").html(deli2);
+$(".deliing2").html(deliing2);
+$(".deli3").html(deli3);
+$(".deliing3").html(deliing3);
+$(".deli4").html(deli4);
+$(".deliing4").html(deliing4);
+
 });
 </script>
 </body>
