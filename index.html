@@ -221,7 +221,7 @@ console.log(formattedToday)
 
 mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
 //mylink = "http://time.jsontest.com/"
-var istheresomething = `false`
+istheresomething = `false`
 console.log(mylink)
 //try {
  // $.get(mylink);
@@ -232,7 +232,7 @@ console.log(mylink)
 //}
 
 $.get(mylink, function(data) {
-
+ istheresomething = `true`
   //special
  var special = `${data.Specials[0]?.name}`
 //main
@@ -369,17 +369,30 @@ if (main0 == "undefined"){
   consolo.log("UHHHHHH")
 } else{
   console.log("there is something")
-  var istheresomething = `true`
+  
 }
 
 });
 </script>
 <script>
-if (istheresomething == `true`){
+console.log(istheresomething)
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+async function demo() {
+    for (let i = 0; i < 5; i++) {
+        console.log(`Waiting ${i} seconds...`);
+        await sleep(i * 1000);
+    }
+    console.log('Done');
+	if (istheresomething == `true`){
+    console.log("istheresomehting is true")
 } else{
   window.location.replace("http://fooderror.jackunderwood.org");
 }
+}
+demo();
 const container = document.getElementById('main0');
 
 try { if (container.textContent.includes('a')) {
