@@ -6,6 +6,12 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>jQuery.ajaxPrefilter(function(options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    }
+});
+</script>
 <title>HIES Menu</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +48,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
     <h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px"><div class="specialtitle"></div></h2>
     <h2 class="w3-center w3-jum" style="margin-bottom:64px"><div class="special"></div></h2>
     <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"></h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
       <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
         <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Main Food</div>
       </a>
@@ -153,8 +160,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 </div>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-   <a href="https://vote.jackunderwood.org/" title="W3.CSS" target="_blank" class="w3-hover-text-green">Coded by Jack Underwood</a></p>
-    <a href="https://vote.jackunderwood.org/" style="margin: bottom -60px;" title="W3.CSS" target="_blank" class="w3-hover-text-green">Learn more about his ideas</a></p>
+   <a href="https://vote.jackunderwood.org/" title="Learn About His Amazing Ideas" target="_blank" class="w3-hover-text-green">Coded by Jack Underwood</a></p>
+    <a href="https://vote.jackunderwood.org/" style="margin: bottom -60px;" title="Learn About His Amazing Ideas" target="_blank" class="w3-hover-text-green">Learn more about his ideas</a></p>
 </footer>
 
 <script>
@@ -197,7 +204,7 @@ if(todayy.getDay() == 6) {
   var dddd = dd;
 }
 
-const formattedToday = mm + '/' + dddd + '/' + yyyy; //REMOVE 27 AND PUT DD LATER
+const formattedToday = mm + '/' + dddd + '/' + yyyy;
 console.log(formattedToday)
 
 //console.log("Is it a weeekend? " + weekend)
