@@ -219,18 +219,37 @@ console.log(formattedToday)
 //https://pacific-reaches-07351.herokuapp.com
 //https://fast-dawn-89938.herokuapp.com/
 
-var mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
+mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
+//mylink = "http://time.jsontest.com/"
 console.log(mylink)
-try {
-  $get(mylink)
-} catch(err){
-  window.location.replace("http://fooderror.jackunderwood.org");
+//try {
+ // $.get(mylink);
+ // console.log("SUCCSES FOR TRY get LINK");
+//} catch(error){
+ //window.location.replace("http://fooderror.jackunderwood.org");
+	 // console.log("EROOR CANT GET LINK")
+//}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+async function demo() {
+    for (let i = 0; i < 5; i++) {
+        console.log(`Waiting ${i} seconds...`);
+        await sleep(i * 1000);
+    }
+    console.log('Done');
+    try{
+      console.log(loadingtime)
+    } catch(e){
+      console.log("its not there")
+    }
+    }
 $.get(mylink, function(data) {
 
+  var loadingtime = "true"
   //special
  var special = `${data.Specials[0]?.name}`
-
 //main
 var main0 = `${data["Entrées"][0]?.name}`
 var maining0 = `${data["Entrées"][0]?.displayStation}`
@@ -360,11 +379,19 @@ $(".deli3").html(deli3);
 $(".deliing3").html(deliing3);
 $(".deli4").html(deli4);
 $(".deliing4").html(deliing4);
+
 if (main0 === "undefined"){
-  alert("fuck me in the bum")
+  consolo.log("UHHHHHH")
+} else{
+  console.log("there is something")
 }
 
 });
+</script>
+<script>
+
+
+demo();
 </script>
 </body>
 </html>
