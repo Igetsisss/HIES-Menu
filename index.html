@@ -195,12 +195,12 @@ if (dd < 10) dd = '0' + dd;
 if (mm < 10) mm = '0' + mm;
 if(todayy.getDay() == 6) { 
   var weekend = `true`;
-  var dddd = dd + 2;
+  var dddd = +dd + 2;
   let message0 = `It's Saturday so this is the Menu for Monday`
   $(".jackiscool").html(message0);
 } else if(todayy.getDay() == 0) {
   var weekend = `true`;
-  var dddd = dd + 1;
+  var dddd = +dd + 1;
   let message = `It's Sunday so this is the Menu for Monday`
   $(".jackiscool").html(message);
 } else {
