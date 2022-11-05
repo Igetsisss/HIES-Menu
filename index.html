@@ -196,11 +196,17 @@ if (mm < 10) mm = '0' + mm;
 if(todayy.getDay() == 6) { 
   var weekend = `true`;
   var dddd = +dd + 2;
+  if (/^\d$/.test(dddd))  {
+  var dddd = "0" + dddd
+}
   let message0 = `It's Saturday so this is the Menu for Monday`
   $(".jackiscool").html(message0);
 } else if(todayy.getDay() == 0) {
   var weekend = `true`;
   var dddd = +dd + 1;
+   if (/^\d$/.test(dddd))  {
+  var dddd = "0" + dddd
+}
   let message = `It's Sunday so this is the Menu for Monday`
   $(".jackiscool").html(message);
 } else {
