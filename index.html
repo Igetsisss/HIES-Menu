@@ -35,9 +35,13 @@ function increment(){
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
 <style>
-body, html {height: 100%}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
-.menu {display: none}
+body, html {
+  height: 100%;
+}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Amatic SC", sans-serif;
+}
+.menu {display: none }
 /* a, .menu, h2 {
   visibility: hidden;
 }
@@ -56,16 +60,31 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   text-decoration: inherit;
   font-size: 5px;
 }
+body {
+  background: #FCE97F;
+  animation: fadeBackground 6s;
+  animation-fill-mode: forwards;
+}
+#menu {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  animation: fadeBackground 6s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeBackground {
+  from { background-color: #000000; }
+  to { background-color: #121d4e; }
+}
 </style>
 </head>
 <body>
 <!-- Menu Container -->
-<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+<div class="w3-container w3-padding-64 w3-xxlarge" id="menu">
   <div class="w3-content">
   
     <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px">The HIES Lunch Menu</h1>
 <h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"><div id="weekend"></div></h1>
-    <h2 class="w3-center w3-xlarge" style="margin-bottom:-10px">Made by Jack Underwood</h2>
+    <h2 class="w3-center w3-xlarge" style="margin-bottom:-10px" id="sup1"><div class="sup1">Made by Jack Underwood</div></h2>
     <h2 class="w3-center w3-xxlarge" style="margin-bottom:-10px; font-style: italic;"><div class="jackiscool"></div></h2>
     <h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px"><div class="specialtitle"></div></h2>
     <h2 class="w3-center w3-jum" style="margin-bottom:64px"><div class="special"></div></h2>
@@ -193,31 +212,12 @@ function play() {
   audio.play();
 }
 </script>
-<script>
-  // Tabbed Menu
-  function openMenu(evt, menuName) {
-    var i, x, tablinks;
-    console.log("Hey Nerd if you click menu 70 times then you get a suprise so far you have done it " + increment() + " times already!");
-      if (n == 69){
-      console.log("ssss")
-       play();
-    }
-    x = document.getElementsByClassName("menu");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < x.length; i++) {
-       tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-    }
-    document.getElementById(menuName).style.display = "block";
-    evt.currentTarget.firstElementChild.className += " w3-red";
-  }
-  document.getElementById("myLink").click();
-  </script>
+
 
 <script>
+document.getElementById("menu").style.webkitAnimationPlayState = "paused";
+
+var jackslazy = "0"
 const today = new Date();
 const yyyy = today.getFullYear();
 let mm = today.getMonth() + 1; // Months start at 0!
@@ -241,6 +241,8 @@ if(todayy.getDay() == 6) {
 }
   let message = `It's Sunday so this is the Menu for Monday`
   $(".jackiscool").html(message);
+} else if(jackslazy == "1"){
+  var dddd = dd + 1;
 } else {
   var weekend = `false`;
   var dddd = dd;
@@ -271,7 +273,7 @@ console.log(mylink)
 	 // console.log("EROOR CANT GET LINK")
 //}
 
-$.get(mylink, function(data) {
+$.get(mylink, function data(data) {
  istheresomething = `true`
   //special
  var special = `${data.Specials[0]?.name}`
@@ -444,5 +446,31 @@ try { if (container.textContent.includes('a')) {
   console.log("s")
 }
 </script>
+<script>
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    console.log("Hey Nerd if you click menu 70 times then you get a suprise so far you have done it " + increment() + " times already!");
+      if (n == 69){
+      console.log("active")
+      play();
+      document.getElementById("menu").style.webkitAnimationPlayState = "running";
+      $(".sup1").html("BUT ITS BLUE!");
+
+    }
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-red";
+  }
+  document.getElementById("myLink").click();
+  </script>
 </body>
 </html>
