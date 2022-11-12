@@ -18,9 +18,18 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-QW3SDRBBTH');
 </script>
+<script>
+var n = 0;
+
+function increment(){
+
+  n++;
+  return n;
+}
+</script>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -41,6 +50,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 }
 .l{
   text-align: center;
+}
+.egg {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: 5px;
 }
 </style>
 </head>
@@ -173,15 +187,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
    <a href="https://medium.com/@underwoodjack185/how-i-took-my-schools-lunch-menu-and-hosted-it-on-my-own-custom-website-628b54e76808" title="Vist the blog" target="_blank" class="w3-hover-text-green">LEARN ABOUT HOW THIS WAS MADE WITH MY BLOG</a></p>
   <!--  <a href="https://vote.jackunderwood.org/" style="margin: bottom -60px;" title="Learn About His Amazing Ideas" target="_blank" class="w3-hover-text-green">Learn more about his ideas</a></p>-->
 </footer>
-
+<script>
+function play() {
+  var audio = new Audio('https://cdn.discordapp.com/attachments/954480232973352963/1040777581147979796/8d82b5_The_Legend_of_Zelda_Secret_Sound_Effect.mp3');
+  audio.play();
+}
+</script>
 <script>
   // Tabbed Menu
   function openMenu(evt, menuName) {
     var i, x, tablinks;
+    console.log("Hey Nerd if you click menu 70 times then you get a suprise so far you have done it " + increment() + " times already!");
+      if (n == 69){
+      console.log("ssss")
+       play();
+    }
     x = document.getElementsByClassName("menu");
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";
     }
+    
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < x.length; i++) {
        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
@@ -191,6 +216,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   }
   document.getElementById("myLink").click();
   </script>
+
 <script>
 const today = new Date();
 const yyyy = today.getFullYear();
