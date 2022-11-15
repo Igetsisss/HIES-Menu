@@ -250,7 +250,7 @@ if(todayy.getDay() == 6) {
 }
 
 const formattedToday = mm + '/' + dddd + '/' + yyyy;
-console.log(formattedToday)
+console.log("The formatted date is " + formattedToday)
 
 //console.log("Is it a weeekend? " + weekend)
 //if (weekend === "true"){
@@ -313,9 +313,9 @@ var sideing9 = `${data["Sides and Vegetables"][9]?.displayStation}`
 
 //special
 if (special === "undefined"){
-  console.log("There is no special")
+  ("There is no special")
 } else {
-  console.log(special)
+  console.log("Special Found! (" + special + ")");
   $(".special").html(special);
   $(".specialtitle").html("Today's Special is");
 }
@@ -409,26 +409,26 @@ $(".deli4").html(deli4);
 $(".deliing4").html(deliing4);
 
 if (main0 == "undefined"){
-  console.log("UHHHHHH")
+  console.log("The first Entree is Undefined")
 } else{
-  console.log("there is something")
+  console.log("The first Entree is Defined")
   
 }
 
 });
 </script>
 <script>
-console.log(istheresomething)
+console.log("The varible istheresomething is " + istheresomething);
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function demo() {
     for (let i = 0; i < 8; i++) {
-        console.log(`Waiting ${i} seconds...`);
+        console.log(`Check if menu has loaded when the amount of seconds is 8 so far there are ${i} seconds...`);
         await sleep(i * 1000);
     }
-    console.log('Done');
+    console.log('Timer is Done, checking if menu has loaded');
 	if (istheresomething == `true`){
     console.log("The Menu has loaded!")
 } else{
@@ -440,12 +440,12 @@ demo();
 const container = document.getElementById('main0');
 
 try { if (container.textContent.includes('a')) {
-  console.log(' Melon is contained in element');
+  console.log('Entree is loaded');
 } else {
-  console.log(' Melon is NOT contained in element');
+  console.log('Entree is not loaded');
 }
 } catch(e){
-  console.log("s")
+  console.log("Entree is not loaded")
 }
 </script>
 <script>
@@ -454,7 +454,7 @@ try { if (container.textContent.includes('a')) {
     var i, x, tablinks;
     console.log("Hey Nerd if you click menu 70 times then you get a suprise so far you have done it " + increment() + " times already!");
       if (n == 69){
-      console.log("active")
+      console.log("Blue Menu is Unlocked! CSS Anamation will now start.")
       play();
       document.getElementById("menu").style.webkitAnimationPlayState = "running";
       $(".sup1").html("BUT ITS BLUE!");
