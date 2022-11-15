@@ -61,7 +61,7 @@ body,h1,h2,h3,h4,h5,h6 {
   font-size: 5px;
 }
 body {
-  background: #FCE97F;
+  background: #000000;
   animation: fadeBackground 6s;
   animation-fill-mode: forwards;
 }
@@ -75,6 +75,7 @@ body {
   from { background-color: #000000; }
   to { background-color: #121d4e; }
 }
+
 </style>
 </head>
 <body>
@@ -423,7 +424,7 @@ function sleep(ms) {
 }
 
 async function demo() {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 8; i++) {
         console.log(`Waiting ${i} seconds...`);
         await sleep(i * 1000);
     }
@@ -431,7 +432,7 @@ async function demo() {
 	if (istheresomething == `true`){
     console.log("istheresomehting is true")
 } else{
-  window.location.replace("http://food.jackunderwood.org/welpgeegoshthereisanerror");
+ alert("Hmmm.... It seems that the Menu is not loading! Please try to reload the page. If that does not work please do not do anything and wait. (ERROR 609)")
 }
 }
 demo();
