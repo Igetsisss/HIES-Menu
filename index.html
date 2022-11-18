@@ -2,614 +2,520 @@
 <!-- Listen here you little computer nerd i dont know who you are or why your in my source code but i want to make something straight this was my idea and so help me god if you copy me i might come for your faimly (for legal reasons thats a joke) ALSOOOO if your a sage web dev and your mad beacuse how many requests this is doing i will gadly take it down just feel free to contact me at jackunderwood@jackunderwood.org or underwoodja@bearsmail.org and tell me your issue and i will comply happly (or you could just give me cross orgin reacure sharing (cors) accscec hehehehe) -->
 <html>
 <head>
-	<title>HIES Menu - Coded by Jack Underwood</title>
-	<meta content="The Holy Innocent’s Episcopal School’s lunch menu - Coded by Jack Underwood." name="description">
-	<meta content="Holy Innocents' Episcopal School, Atlanta, Buckhead, Dunwoody, Sandy Springs, private school, private school in Buckhead, independent school, sandy springs, private schools, Buckhead, HIES, private school Atlanta, SAGE, sage, sage dinning, menu, food, hies lunch menu, hies menu, hies food" name="keywords">
-	<link href="favicon.ico" rel="icon">
-	<link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon">
-	<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-	<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-	<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-	<link href="/site.webmanifest" rel="manifest">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js">
-	</script><!-- Google tag (gtag.js) -->
 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QW3SDRBBTH">
-	</script>
-	<script>
-	    window.dataLayer = window.dataLayer || [];
-	    function gtag(){dataLayer.push(arguments);}
-	    gtag('js', new Date());
-	    gtag('config', 'G-QW3SDRBBTH');
-	</script>
-	<script>
-	   var n = 0;
+<!-- Title, Description and keywords for google indexing -->
 
-	   function increment(){
+<title>HIES Menu - Coded by Jack Underwood</title>
+<meta name="description" content="The Holy Innocent’s Episcopal School’s lunch menu - Coded by Jack Underwood.">
+<meta name="keywords" content="Holy Innocents' Episcopal School, Atlanta, Buckhead, Dunwoody, Sandy Springs, private school, private school in Buckhead, independent school, sandy springs, private schools, Buckhead, HIES, private school Atlanta, SAGE, sage, sage dinning, menu, food, hies lunch menu, hies menu, hies food">
 
-	    n++;
-	    return n;
-	   }
-	</script>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-	<style>
-	   body, html {
-	    height: 100%;
-	   }
-	   body,h1,h2,h3,h4,h5,h6 {
-	    font-family: "Amatic SC", sans-serif;
-	   }
-	   .menu {display: none }
-	   /* a, .menu, h2 {
-	    visibility: hidden;
-	   }
-	   */
-	   .bgimg {
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	    background-image: url("/w3images/pizza.jpg");
-	    min-height: 90%;;
-	   }
-	   .l{
-	    text-align: center;
-	   }
-	   .egg {
-	    color: inherit;
-	    text-decoration: inherit;
-	    font-size: 5px;
-	   }
-	   body {
-	    background: #000000;
-	    animation: blackBackground 1s;
-	    animation: fadeBackground 6s;
-	    animation: blackBackground 1s;
-	    animation-fill-mode: forwards;
-	   }
-	   #menu {
-	    background-color: rgb(0, 0, 0);
-	    color: white;
-	    animation: blackBackground 1s;
-	    animation: fadeBackground 6s;
-	    animation-fill-mode: forwards;
-	   }
-	   @keyframes fadeBackground {
-	    from { background-color: #000000; }
-	    to { background-color: #121d4e; }
-	   }
-	   @keyframes blackBackground {
-	    from { background-color: #000000; }
-	    to { background-color: #000000; }
-	   }
-	   .sup1{text-align: center;}
-	</style>
+<!-- Favicons (the icon you see on the tab bar)-->
+
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Jquery, a simpled JavaScript libary -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QW3SDRBBTH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QW3SDRBBTH');
+</script>
+
+<!-- Increment Function to count how many times the menu button was clicked-->
+
+<script>
+var n = 0;
+
+function increment(){
+
+  n++;
+  return n;
+}
+</script>
+  
+<!-- Importing Style Libarys and defining the veiwport, the user's visible area of a web page -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+<!-- CSS, a coding langue that handles all the styles on the website. Ex. Text Size or Fonts -->
+
+<style>
+body, html {
+  height: 100%;
+}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Amatic SC", sans-serif;
+}
+.menu {display: none }
+
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90%;;
+}
+.l{
+  text-align: center;
+}
+.egg {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: 5px;
+}
+
+/* All of CSS below is deprived of keyframes, which allow the blue transition to fade in when the user clicks the menu button 70 times */
+
+body {
+  background: #000000;
+  animation: blackBackground 1s;
+  animation: fadeBackground 6s;
+  animation: blackBackground 1s;
+  animation-fill-mode: forwards;
+}
+#menu {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  animation: blackBackground 1s;
+  animation: fadeBackground 6s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeBackground {
+  from { background-color: #000000; }
+  to { background-color: #121d4e; }
+}
+@keyframes blackBackground {
+  from { background-color: #000000; }
+  to { background-color: #000000; }
+}
+</style>
 </head>
 <body>
-	<!-- Menu Container -->
-	<div class="w3-container w3-padding-64 w3-xxlarge" id="menu">
-		<div class="w3-content">
-			<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px">The HIES Lunch Menu</h1>
-			<div id="weekend">
-				<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"></h1>
-			</div>
-			<div class="sup1">
-				<h2 class="w3-center w3-xlarge" id="sup1" style="margin-bottom:-10px">Made by Jack Underwood</h2>
-			</div>
-			<div class="jackiscool">
-				<h2 class="w3-center w3-xxlarge" style="margin-bottom:-10px; font-style: italic;"></h2>
-			</div>
-			<div class="specialtitle">
-				<h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px"></h2>
-			</div>
-			<div class="special">
-				<h2 class="w3-center w3-jum" style="margin-bottom:64px"></h2>
-			</div>
-			<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"></h1>
-			<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"></h1><!-- <div class="l"><h3><a href="https://cors-anywhere.herokuapp.com/" style="text-align: center" style="margin: bottom -20px;" title="W3.CSS" target="_blank" class="w3-hover-text-green">If it's not loading click me</a></h3></div> -->
-			<div class="w3-row w3-center w3-border w3-border-dark-grey">
-				<a href="javascript:void(0)" id="myLink" onclick="openMenu(event, 'Pizza');">
-				<div class="w3-col s4 tablink w3-padding-large w3-hover-red">
-					Main Food
-				</div></a> <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-				<div class="w3-col s4 tablink w3-padding-large w3-hover-red">
-					SIDES AND VEGETABLES
-				</div></a> <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-				<div class="w3-col s4 tablink w3-padding-large w3-hover-red">
-					Deli and Soup
-				</div></a>
-			</div><!--MAIN-->
-			<div class="w3-container menu w3-padding-32 w3-white" id="Pizza">
-				<h1><b></b></h1>
-				<div class="main0">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="maining0">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="main1">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="maining1">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="main2">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="maining2">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="main3">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="maining3">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-			</div><!--SIDES-->
-			<div class="w3-container menu w3-padding-32 w3-white" id="Pasta">
-				<b></b>
-				<h1><b><b></b></b></h1>
-				<div class="side0">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing0">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side1">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing1">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side2">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing2">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side3">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing3">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side4">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing4">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side5">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing5">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side6">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing6">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side7">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing7">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side8">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing8">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="side9">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="sideing9">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-			</div><!--DELI AND SOUP -->
-			<div class="w3-container menu w3-padding-32 w3-white" id="Starter">
-				<b></b>
-				<h1><b><b></b></b></h1>
-				<div class="soup0">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="souping0">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="soup1">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="souping1">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="deli0">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="deliing0">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="deli1">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="deliing1">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="deli2">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="deliing2">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="deli3">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="deliing3">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-				<h1><b><b></b></b></h1>
-				<div class="deli4">
-					<h1></h1>
-				</div>
-				<p class="w3-text-grey"><b></b></p>
-				<div class="deliing4">
-					<b></b>
-				</div>
-				<p></p>
-				<hr>
-			</div><!-- Footer -->
-			<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-				<b><a class="w3-hover-text-green" href="https://medium.com/@underwoodjack185/how-i-took-my-schools-lunch-menu-and-hosted-it-on-my-own-custom-website-628b54e76808" target="_blank" title="Vist the blog">LEARN ABOUT HOW THIS WAS MADE WITH MY BLOG</a><br>
-				<br>
-				<!--  <a href="https://vote.jackunderwood.org/" style="margin: bottom -60px;" title="Learn About His Amazing Ideas" target="_blank" class="w3-hover-text-green">Learn more about his ideas</a></p>--></b>
-			</footer><b>
-			<script>
-			         function play() {
-			         var audio = new Audio('https://cdn.discordapp.com/attachments/954480232973352963/1040777581147979796/8d82b5_The_Legend_of_Zelda_Secret_Sound_Effect.mp3');
-			         audio.play();
-			         }
-			</script> 
-			<script>
-			         document.getElementById("menu").style.webkitAnimationPlayState = "paused";
 
-			         var jackslazy = "0"
-			         const today = new Date();
-			         const yyyy = today.getFullYear();
-			         let mm = today.getMonth() + 1; // Months start at 0!
-			         let dd = today.getDate();
-			         var todayy = new Date();
-			         if (dd < 10) dd = '0' + dd;
-			         if (mm < 10) mm = '0' + mm;
-			         if(todayy.getDay() == 6) { 
-			         var weekend = `true`;
-			         var dddd = +dd + 2;
-			         if (/^\d$/.test(dddd))  {
-			         var dddd = "0" + dddd
-			         }
-			         let message0 = `It's Saturday so this is the Menu for Monday`
-			         $(".jackiscool").html(message0);
-			         } else if(todayy.getDay() == 0) {
-			         var weekend = `true`;
-			         var dddd = +dd + 1;
-			         if (/^\d$/.test(dddd))  {
-			         var dddd = "0" + dddd
-			         }
-			         let message = `It's Sunday so this is the Menu for Monday`
-			         $(".jackiscool").html(message);
-			         } else if(jackslazy == "1"){
-			         var dddd = dd + 1;
-			         } else {
-			         var weekend = `false`;
-			         var dddd = dd;
-			         }
+<!-- Menu Container -->
 
-			         const formattedToday = mm + '/' + dddd + '/' + yyyy;
-			         console.log("The formatted date is " + formattedToday)
+<div class="w3-container w3-padding-64 w3-xxlarge" id="menu">
+<div class="w3-content">
 
-			         //console.log("Is it a weeekend? " + weekend)
-			         //if (weekend === "true"){
-			         //  document.getElementById(a).style.display = 'hidden';
-			         //  document.getElementById(menu).style.display = 'hidden';
-			         //  document.getElementById(h2).style.display = 'hidden';
-			         // console.log("ITSA WEEKEND GET OFF MY WEBSITE BOZO")
-			         //}
-			         //https://pacific-reaches-07351.herokuapp.com
-			         //https://fast-dawn-89938.herokuapp.com/
+<!-- The headers of the website which is "The HIES Lunch Menu" and "Made by Jack Underwood" and a volatile special header that only shows when a special is present -->
 
-			         mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch";
-			         //mylink = "http://time.jsontest.com/"
-			         istheresomething = `false`
-			         console.log(mylink)
-			         //try {
-			         // $.get(mylink);
-			         // console.log("SUCCSES FOR TRY get LINK");
-			         //} catch(error){
-			         //window.location.replace("http://fooderror.jackunderwood.org");
-			           // console.log("EROOR CANT GET LINK")
-			         //}
+<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px">The HIES Lunch Menu</h1>
+<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"><div id="weekend"></div></h1>
+<h2 class="w3-center w3-xlarge" style="margin-bottom:-10px" id="sup1"><div class="sup1">Made by Jack Underwood</div></h2>
+<h2 class="w3-center w3-xxlarge" style="margin-bottom:-10px; font-style: italic;"><div class="jackiscool"></div></h2>
+<h2 class="w3-center w3-xxxlarge" style="margin-bottom:0px"><div class="specialtitle"></div></h2>
+<h2 class="w3-center w3-jum" style="margin-bottom:64px"><div class="special"></div></h2>
+<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"></h1>
+<h1 class="w3-center w3-jumbo" style="margin-bottom:-10px"></h1>
 
-			         $.get(mylink, function data(data) {
-			         istheresomething = `true`
-			         //special
-			         var special = `${data.Specials[0]?.name}`
-			         //main
-			         var main0 = `${data["Entrées"][0]?.name}`
-			         var maining0 = `${data["Entrées"][0]?.displayStation}`
-			         var main1 = `${data["Entrées"][1]?.name}`
-			         var maining1 = `${data["Entrées"][1]?.displayStation}`
-			         var main2 = `${data["Entrées"][2]?.name}`
-			         var maining2 = `${data["Entrées"][2]?.displayStation}`
-			         var main3 = `${data["Entrées"][3]?.name}`
-			         var maining3 = `${data["Entrées"][3]?.displayStation}`
+<!-- Menu Headers linked to JavaScript function so you can click them and go to anothor part of the meny-->
 
-			         //sides
-			         var side0 = `${data["Sides and Vegetables"][0]?.name}`
-			         var sideing0 = `${data["Sides and Vegetables"][0]?.displayStation}`
-			         var side1 = `${data["Sides and Vegetables"][1]?.name}`
-			         var sideing1 = `${data["Sides and Vegetables"][1]?.displayStation}`
-			         var side2 = `${data["Sides and Vegetables"][2]?.name}`
-			         var sideing2 = `${data["Sides and Vegetables"][2]?.displayStation}`
-			         var side3 = `${data["Sides and Vegetables"][3]?.name}`
-			         var sideing3 = `${data["Sides and Vegetables"][3]?.displayStation}`
-			         var side4 = `${data["Sides and Vegetables"][4]?.name}`
-			         var sideing4 = `${data["Sides and Vegetables"][4]?.displayStation}`
-			         var side5 = `${data["Sides and Vegetables"][5]?.name}`
-			         var sideing5 = `${data["Sides and Vegetables"][5]?.displayStation}`
-			         var side6 = `${data["Sides and Vegetables"][6]?.name}`
-			         var sideing6 = `${data["Sides and Vegetables"][6]?.displayStation}`
-			         var side7 = `${data["Sides and Vegetables"][7]?.name}`
-			         var sideing7 = `${data["Sides and Vegetables"][7]?.displayStation}`
-			         var side8 = `${data["Sides and Vegetables"][8]?.name}`
-			         var sideing8 = `${data["Sides and Vegetables"][8]?.displayStation}`
-			         var side9 = `${data["Sides and Vegetables"][9]?.name}`
-			         var sideing9 = `${data["Sides and Vegetables"][9]?.displayStation}`
+<div class="w3-row w3-center w3-border w3-border-dark-grey">
+<a href="javascript:void(0)" onclick="openMenu(event, 'Main');" id="myLink">
+<div class="w3-col s4 tablink w3-padding-large w3-hover-red">Main Food</div>
+</a>
+<a href="javascript:void(0)" onclick="openMenu(event, 'Sides');">
+<div class="w3-col s4 tablink w3-padding-large w3-hover-red">SIDES AND VEGETABLES</div>
+</a>
+<a href="javascript:void(0)" onclick="openMenu(event, 'DeliandSoup');">
+<div class="w3-col s4 tablink w3-padding-large w3-hover-red">Deli and Soup</div>
+</a>
+</div>
+
+<!-- MAIN (Entrees) -->
+
+<div id="Main" class="w3-container menu w3-padding-32 w3-white">
+      
+  <h1><b><div class="main0"></div></b></h1>
+  <p class="w3-text-grey"><div class="maining0"></div></p>
+  <hr>
+   
+  <h1><b><div class="main1"></div></b></h1>
+  <p class="w3-text-grey"><div class="maining1"></div></p>
+  <hr>
+      
+  <h1><b><div class="main2"></div></b></h1>
+  <p class="w3-text-grey"><div class="maining2"></div></p>
+  <hr>
+
+  <h1><b><div class="main3"></div></b></h1>
+  <p class="w3-text-grey"><div class="maining3"></div></p>
+  <hr>
+</div>
+
+<!--SIDES-->
+
+<div id="Sides" class="w3-container menu w3-padding-32 w3-white">
+      
+  <h1><b><div class="side0"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing0"></div></p>
+  <hr>
+    
+  <h1><b><div class="side1"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing1"></div></p>
+  <hr>
+      
+  <h1><b><div class="side2"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing2"></div></p>
+  <hr>
+    
+  <h1><b><div class="side3"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing3"></div></p>
+  <hr>
+      
+  <h1><b><div class="side4"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing4"></div></p>
+  <hr>
+      
+  <h1><b><div class="side5"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing5"></div></p>
+  <hr>
+      
+  <h1><b><div class="side6"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing6"></div></p>
+  <hr>
+      
+  <h1><b><div class="side7"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing7"></div></p>
+  <hr>
+      
+  <h1><b><div class="side8"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing8"></div></p>
+  <hr>
+      
+  <h1><b><div class="side9"></div></b></h1>
+  <p class="w3-text-grey"><div class="sideing9"></div></p>
+  <hr>
+      
+</div>
+
+ <!--DELI AND SOUP -->
+
+ <div id="DeliandSoup" class="w3-container menu w3-padding-32 w3-white">
+  <h1><b><div class="soup0"></div></b></h1>
+  <p class="w3-text-grey"><div class="souping0"></div></p>
+  <hr>
+
+  <h1><b><div class="soup1"></div></b></h1>
+  <p class="w3-text-grey"><div class="souping1"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli0"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing0"></div></p>
+  <hr>
+
+  <h1><b><div class="deli1"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing1"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli2"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing2"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli3"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing3"></div></p>
+  <hr>
+  
+  <h1><b><div class="deli4"></div></b></h1>
+  <p class="w3-text-grey"><div class="deliing4"></div></p>
+  <hr>
+
+</div>
+
+<!-- Footer -->
+
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+   <a href="https://medium.com/@underwoodjack185/how-i-took-my-schools-lunch-menu-and-hosted-it-on-my-own-custom-website-628b54e76808" title="Vist the blog" target="_blank" class="w3-hover-text-green">LEARN ABOUT HOW THIS WAS MADE WITH MY BLOG</a></p>
+ 
+</footer>
+
+<!-- A JavaScrip Function that play the Zelda Secret Sound when we call play() -->
+
+<script>
+function play() {
+  var audio = new Audio('https://cdn.discordapp.com/attachments/954480232973352963/1040777581147979796/8d82b5_The_Legend_of_Zelda_Secret_Sound_Effect.mp3');
+  audio.play();
+}
+</script>
+
+<!-- The main script of the website the deals primaly with geting the sage api then writing it to the website -->
+
+<script>
+
+// Stop's the CSS anamtion from happening so it does not instally turn blue
+
+document.getElementById("menu").style.webkitAnimationPlayState = "paused";
+
+// Get's the user's date and time then checks if it is less than 10 so it can put a zero infront of the number this is beacuse sage api date query uses leading zero. 
+// After that it checks if its a weekend if it is then shows the menu for monday as there is no menu in the weekend
+// This is also mostly just forrmating the date beacuse JavaScript does not have one date function instead is consits of getting each number individually
+
+var jackslazy = "0" // please don't mind my weird varible names
+
+const today = new Date(); // Use new Date() to generate a new Date object containing the current date and time.
+const yyyy = today.getFullYear();  // Set's the varible "yyyy" to the year
+let mm = today.getMonth() + 1;  // Set's the varible "mmm" to the current month
+let dd = today.getDate();  // Set's the varible "dd" to the current day 
+var todayy = new Date(); // goofy var name
+if (dd < 10) dd = '0' + dd; // checking if day is less than 10 so we can use leading zero
+if (mm < 10) mm = '0' + mm; // same thing as above but the month
+
+// checking if it's the weekend if so displaying the menu for monday
+
+if(todayy.getDay() == 6) {
+  var weekend = `true`;
+  var dddd = +dd + 2;
+  if (/^\d$/.test(dddd))  {
+  var dddd = "0" + dddd
+}
+  let message0 = `It's Saturday so this is the Menu for Monday`
+  $(".jackiscool").html(message0);
+} else if(todayy.getDay() == 0) {
+  var weekend = `true`;
+  var dddd = +dd + 1;
+   if (/^\d$/.test(dddd))  {
+  var dddd = "0" + dddd
+}
+  let message = `It's Sunday so this is the Menu for Monday`
+  $(".jackiscool").html(message);
+} else if(jackslazy == "1"){
+  var dddd = dd + 1;
+} else {
+  var weekend = `false`;
+  var dddd = dd;
+}
+
+const formattedToday = mm + '/' + dddd + '/' + yyyy; // formating final date
+console.log("The formatted date is " + formattedToday) // printing in console
 
 
-			         //special
-			         if (special === "undefined"){
-			         ("There is no special")
-			         } else {
-			         console.log("Special Found! (" + special + ")");
-			         $(".special").html(special);
-			         $(".specialtitle").html("Today's Special is");
-			         }
+mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch"; // preparing sage link by putting the date in the url
 
-			         // Deli and Soup
-			         var soup0 = `${data.Soups[0]?.name}`
-			         var souping0 = `${data.Soups[0]?.displayStation}`
-			         var soup1 = `${data.Soups[1]?.name}`
-			         var souping1 = `${data.Soups[1]?.displayStation}`
-			         var deli0 = `${data.Deli[0]?.name}`
-			         var deliing0 = `${data.Deli[0]?.displayStation}`
-			         var deli1 = `${data.Deli[1]?.name}`
-			         var deliing1 = `${data.Deli[1]?.displayStation}`
-			         var deli2 = `${data.Deli[2]?.name}`
-			         var deliing2 = `${data.Deli[2]?.displayStation}`
-			         var deli3 = `${data.Deli[3]?.name}`
-			         var deliing3 = `${data.Deli[3]?.displayStation}`
-			         var deli4 = `${data.Deli[4]?.name}`
-			         var deliing4 = `${data.Deli[4]?.displayStation}`
+istheresomething = `false` // var for checking entree
+console.log(mylink) // printing in console link
 
-			         //main
-			         $(".main0").html(main0);
-			         $(".maining0").html(maining0);
-			         $(".main1").html(main1);
-			         $(".maining1").html(maining1);
-			         $(".main2").html(main2);
-			         $(".maining2").html(maining2);
-			         $(".main3").html(main3);
-			         $(".maining3").html(maining3);
 
-			         //sides
-			         $(".side0").html(side0);
-			         $(".sideing0").html(sideing0);
-			         $(".side1").html(side1);
-			         $(".sideing1").html(sideing1);
-			         $(".side2").html(side2);
-			         $(".sideing2").html(sideing2);
-			         $(".side3").html(side3);
-			         $(".sideing3").html(sideing3);
-			         $(".side4").html(side4);
-			         $(".sideing4").html(sideing4);
-			         $(".side5").html(side5);
-			         $(".sideing5").html(sideing5);
-			         $(".side6").html(side6);
-			         $(".sideing6").html(sideing6);
+$.get(mylink, function data(data) { // get request to retrive sage api
+ istheresomething = `true`
 
-			         if (side7 === "undefined"){
+ // All the code below goes through the JSON file then displays it on the website
 
-			         } else {
-			         $(".side7").html(side7);
-			         $(".sideing7").html(sideing7);
-			         }
+//special
+ var special = `${data.Specials[0]?.name}`
+//main
+var main0 = `${data["Entrées"][0]?.name}`
+var maining0 = `${data["Entrées"][0]?.displayStation}`
+var main1 = `${data["Entrées"][1]?.name}`
+var maining1 = `${data["Entrées"][1]?.displayStation}`
+var main2 = `${data["Entrées"][2]?.name}`
+var maining2 = `${data["Entrées"][2]?.displayStation}`
+var main3 = `${data["Entrées"][3]?.name}`
+var maining3 = `${data["Entrées"][3]?.displayStation}`
 
-			         if (side8 === "undefined"){
+//sides
+var side0 = `${data["Sides and Vegetables"][0]?.name}`
+var sideing0 = `${data["Sides and Vegetables"][0]?.displayStation}`
+var side1 = `${data["Sides and Vegetables"][1]?.name}`
+var sideing1 = `${data["Sides and Vegetables"][1]?.displayStation}`
+var side2 = `${data["Sides and Vegetables"][2]?.name}`
+var sideing2 = `${data["Sides and Vegetables"][2]?.displayStation}`
+var side3 = `${data["Sides and Vegetables"][3]?.name}`
+var sideing3 = `${data["Sides and Vegetables"][3]?.displayStation}`
+var side4 = `${data["Sides and Vegetables"][4]?.name}`
+var sideing4 = `${data["Sides and Vegetables"][4]?.displayStation}`
+var side5 = `${data["Sides and Vegetables"][5]?.name}`
+var sideing5 = `${data["Sides and Vegetables"][5]?.displayStation}`
+var side6 = `${data["Sides and Vegetables"][6]?.name}`
+var sideing6 = `${data["Sides and Vegetables"][6]?.displayStation}`
+var side7 = `${data["Sides and Vegetables"][7]?.name}`
+var sideing7 = `${data["Sides and Vegetables"][7]?.displayStation}`
+var side8 = `${data["Sides and Vegetables"][8]?.name}`
+var sideing8 = `${data["Sides and Vegetables"][8]?.displayStation}`
+var side9 = `${data["Sides and Vegetables"][9]?.name}`
+var sideing9 = `${data["Sides and Vegetables"][9]?.displayStation}`
 
-			         } else {
-			         $(".side8").html(side8);
-			         $(".sideing8").html(sideing8);
-			         }
-			         if (side9 === "undefined"){
 
-			         } else {
-			         $(".side9").html(side9);
-			         $(".sideing9").html(sideing9);
-			         }
+//special
+if (special === "undefined"){
+  ("There is no special")
+} else {
+  console.log("Special Found! (" + special + ")");
+  $(".special").html(special);
+  $(".specialtitle").html("Today's Special is");
+}
 
-			         //Deli and Soup
-			         if (soup0 === "undefined"){
+// Deli and Soup
+var soup0 = `${data.Soups[0]?.name}`
+var souping0 = `${data.Soups[0]?.displayStation}`
+var soup1 = `${data.Soups[1]?.name}`
+var souping1 = `${data.Soups[1]?.displayStation}`
+var deli0 = `${data.Deli[0]?.name}`
+var deliing0 = `${data.Deli[0]?.displayStation}`
+var deli1 = `${data.Deli[1]?.name}`
+var deliing1 = `${data.Deli[1]?.displayStation}`
+var deli2 = `${data.Deli[2]?.name}`
+var deliing2 = `${data.Deli[2]?.displayStation}`
+var deli3 = `${data.Deli[3]?.name}`
+var deliing3 = `${data.Deli[3]?.displayStation}`
+var deli4 = `${data.Deli[4]?.name}`
+var deliing4 = `${data.Deli[4]?.displayStation}`
 
-			         } else {
-			         $(".soup0").html(soup0);
-			         $(".souping0").html(souping0);
-			         }
-			         if (soup1 === "undefined"){
+//main
+$(".main0").html(main0);
+$(".maining0").html(maining0);
+$(".main1").html(main1);
+$(".maining1").html(maining1);
+$(".main2").html(main2);
+$(".maining2").html(maining2);
+$(".main3").html(main3);
+$(".maining3").html(maining3);
 
-			         } else {
-			         $(".soup1").html(soup1);
-			         $(".souping1").html(souping1);
-			         }
-			         $(".soup0").html(soup0);
-			         $(".souping0").html(souping0);
-			         $(".deli0").html(deli0);
-			         $(".deliing0").html(deliing0);
-			         $(".deli1").html(deli1);
-			         $(".deliing1").html(deliing1);
-			         $(".deli2").html(deli2);
-			         $(".deliing2").html(deliing2);
-			         $(".deli3").html(deli3);
-			         $(".deliing3").html(deliing3);
-			         $(".deli4").html(deli4);
-			         $(".deliing4").html(deliing4);
+//sides
+$(".side0").html(side0);
+$(".sideing0").html(sideing0);
+$(".side1").html(side1);
+$(".sideing1").html(sideing1);
+$(".side2").html(side2);
+$(".sideing2").html(sideing2);
+$(".side3").html(side3);
+$(".sideing3").html(sideing3);
+$(".side4").html(side4);
+$(".sideing4").html(sideing4);
+$(".side5").html(side5);
+$(".sideing5").html(sideing5);
+$(".side6").html(side6);
+$(".sideing6").html(sideing6);
 
-			         if (main0 == "undefined"){
-			         console.log("The first Entree is Undefined")
-			         } else{
-			         console.log("The first Entree is Defined")
+// sometimes the sides vary in amount so we to avoid it displaying undefined we check if there's no side if not we dont display anything
+if (side7 === "undefined"){
+  
+} else {
+  $(".side7").html(side7);
+  $(".sideing7").html(sideing7);
+}
 
-			         }
+if (side8 === "undefined"){
+  
+} else {
+  $(".side8").html(side8);
+  $(".sideing8").html(sideing8);
+}
+if (side9 === "undefined"){
+  
+} else {
+  $(".side9").html(side9);
+  $(".sideing9").html(sideing9);
+}
 
-			         });
-			</script> 
-			<script>
-			         console.log("The varible istheresomething is " + istheresomething);
-			         function sleep(ms) {
-			          return new Promise(resolve => setTimeout(resolve, ms));
-			         }
+//Deli and Soup
+if (soup0 === "undefined"){
+  
+} else {
+  $(".soup0").html(soup0);
+  $(".souping0").html(souping0);
+}
+if (soup1 === "undefined"){
+  
+} else {
+  $(".soup1").html(soup1);
+  $(".souping1").html(souping1);
+}
+$(".soup0").html(soup0);
+$(".souping0").html(souping0);
+$(".deli0").html(deli0);
+$(".deliing0").html(deliing0);
+$(".deli1").html(deli1);
+$(".deliing1").html(deliing1);
+$(".deli2").html(deli2);
+$(".deliing2").html(deliing2);
+$(".deli3").html(deli3);
+$(".deliing3").html(deliing3);
+$(".deli4").html(deli4);
+$(".deliing4").html(deliing4);
 
-			         async function demo() {
-			          for (let i = 0; i < 8; i++) {
-			              console.log(`Check if menu has loaded when the amount of seconds is 8 so far there are ${i} seconds...`);
-			              await sleep(i * 1000);
-			          }
-			          console.log('Timer is Done, checking if menu has loaded');
-			          if (istheresomething == `true`){
-			          console.log("The Menu has loaded!")
-			         } else{
-			         console.log("The Menu has not loaded alerting error to user")
-			         alert("Hmmm.... It seems that the Menu is not loading! Please try to reload the page. If that does not work please do not do anything and wait. (ERROR 609)")
-			         }
-			         }
-			         demo();
-			         const container = document.getElementById('main0');
+// checks if entree is there so we can send a error if not
 
-			         try { if (container.textContent.includes('a')) {
-			         console.log('Entree is loaded');
-			         } else {
-			         console.log('Entree is not loaded');
-			         }
-			         } catch(e){
-			         console.log("Entree is not loaded")
-			         }
-			</script> 
-			<script>
-			          
-			         // Tabbed Menu
-			         function openMenu(evt, menuName) {
-			          var i, x, tablinks;
-			          console.log("Hey Nerd if you click menu 70 times then you get a suprise so far you have done it " + increment() + " times already!");
-			            if (n == 69){
-			            console.log("Blue Menu is Unlocked! CSS Anamation will now start.")
-			            play();
-			            document.getElementById("menu").style.webkitAnimationPlayState = "running";
-			            $(".sup1").html("BUT ITS BLUE!");
+if (main0 == "undefined"){
+  console.log("The first Entree is Undefined")
+} else{
+  console.log("The first Entree is Defined")
+  
+}
+});
+</script>
 
-			          }
-			          x = document.getElementsByClassName("menu");
-			          for (i = 0; i < x.length; i++) {
-			             x[i].style.display = "none";
-			          }
-			          
-			          tablinks = document.getElementsByClassName("tablink");
-			          for (i = 0; i < x.length; i++) {
-			             tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-			          }
-			          document.getElementById(menuName).style.display = "block";
-			          evt.currentTarget.firstElementChild.className += " w3-red";
-			         }
-			         document.getElementById("myLink").click();
-			</script></b>
-		</div>
-	</div>
+<script>
+console.log("The varible istheresomething is " + istheresomething); // logs if the var is true or false
+
+// This part checks if the entree is loaded after 8 sec if its not loaded then it tells the user to reload the page
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function demo() {
+    for (let i = 0; i < 8; i++) {
+        console.log(`Check if menu has loaded when the amount of seconds is 8 so far there are ${i} seconds...`);
+        await sleep(i * 1000);
+    }
+    console.log('Timer is Done, checking if menu has loaded');
+	if (istheresomething == `true`){
+    console.log("The Menu has loaded!")
+} else{
+ console.log("The Menu has not loaded alerting error to user")
+ alert("Hmmm.... It seems that the Menu is not loading! Please try to reload the page. If that does not work please do not do anything and wait. (ERROR 609)")
+}
+}
+demo();
+const container = document.getElementById('main0');
+
+try { if (container.textContent.includes('a')) {
+  console.log('Entree is loaded');
+} else {
+  console.log('Entree is not loaded');
+}
+} catch(e){
+  console.log("Entree is not loaded")
+}
+</script>
+<script>
+    
+  // Tabbed Menu anddddd if the YOU! click the menu button 69 times ¬‿¬ then the menu turns BLUE!
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    console.log("Hey Nerd if you click menu 70 times then you get a suprise so far you have done it " + increment() + " times already!");
+      if (n == 69){
+      console.log("Blue Menu is Unlocked! CSS Anamation will now start.")
+      play();
+      document.getElementById("menu").style.webkitAnimationPlayState = "running";
+      $(".sup1").html("BUT ITS BLUE!");
+
+    }
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-red";
+  }
+  document.getElementById("myLink").click();
+  </script>
 </body>
 </html>
