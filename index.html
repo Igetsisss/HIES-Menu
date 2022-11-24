@@ -140,19 +140,19 @@ body {
       
   <h1><b><div class="main0"></div></b></h1>
   <p class="w3-text-grey"><div class="maining0"></div></p>
-  <hr>
+  <hr id="main0hr">
    
   <h1><b><div class="main1"></div></b></h1>
   <p class="w3-text-grey"><div class="maining1"></div></p>
-  <hr>
+  <hr id="main1hr">
       
   <h1><b><div class="main2"></div></b></h1>
   <p class="w3-text-grey"><div class="maining2"></div></p>
-  <hr>
+  <hr id="main2hr">
 
   <h1><b><div class="main3"></div></b></h1>
   <p class="w3-text-grey"><div class="maining3"></div></p>
-  <hr>
+  <hr id="main3hr">
 </div>
 
 <!--SIDES-->
@@ -161,43 +161,43 @@ body {
       
   <h1><b><div class="side0"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing0"></div></p>
-  <hr>
+  <hr id="side0hr">
     
   <h1><b><div class="side1"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing1"></div></p>
-  <hr>
+  <hr id="side1hr">
       
   <h1><b><div class="side2"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing2"></div></p>
-  <hr>
+  <hr id="side2hr">
     
   <h1><b><div class="side3"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing3"></div></p>
-  <hr>
+  <hr id="side3hr">
       
   <h1><b><div class="side4"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing4"></div></p>
-  <hr>
+  <hr id="side4hr">
       
   <h1><b><div class="side5"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing5"></div></p>
-  <hr>
+  <hr id="side5hr">
       
   <h1><b><div class="side6"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing6"></div></p>
-  <hr>
+  <hr id="side6hr">
       
   <h1><b><div class="side7"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing7"></div></p>
-  <hr>
+  <hr id="side7hr">
       
   <h1><b><div class="side8"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing8"></div></p>
-  <hr>
+  <hr id="side8hr">
       
   <h1><b><div class="side9"></div></b></h1>
   <p class="w3-text-grey"><div class="sideing9"></div></p>
-  <hr>
+  <hr id="side9hr">
       
 </div>
 
@@ -206,31 +206,31 @@ body {
  <div id="DeliandSoup" class="w3-container menu w3-padding-32 w3-white">
   <h1><b><div class="soup0"></div></b></h1>
   <p class="w3-text-grey"><div class="souping0"></div></p>
-  <hr>
+  <hr id="soup0hr">
 
   <h1><b><div class="soup1"></div></b></h1>
   <p class="w3-text-grey"><div class="souping1"></div></p>
-  <hr>
+  <hr id="soup1hr">
   
   <h1><b><div class="deli0"></div></b></h1>
   <p class="w3-text-grey"><div class="deliing0"></div></p>
-  <hr>
+  <hr id="deli0hr">
 
   <h1><b><div class="deli1"></div></b></h1>
   <p class="w3-text-grey"><div class="deliing1"></div></p>
-  <hr>
+  <hr id="deli1hr">
   
   <h1><b><div class="deli2"></div></b></h1>
   <p class="w3-text-grey"><div class="deliing2"></div></p>
-  <hr>
+  <hr id="deli2hr">
   
   <h1><b><div class="deli3"></div></b></h1>
   <p class="w3-text-grey"><div class="deliing3"></div></p>
-  <hr>
+  <hr id="deli3hr">
   
   <h1><b><div class="deli4"></div></b></h1>
   <p class="w3-text-grey"><div class="deliing4"></div></p>
-  <hr>
+  <hr id="deli4hr">
 
 </div>
 
@@ -300,9 +300,9 @@ if(todayy.getDay() == 6) {
 const formattedToday = mm + '/' + dddd + '/' + yyyy; // formating final date
 console.log("The formatted date is " + formattedToday) // printing in console
 
-
+// PUT THIS BACK LATER
 mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=" + formattedToday + "&meal=Lunch"; // preparing sage link by putting the date in the url
-
+//mylink = "https://pacific-reaches-07351.herokuapp.com/https://www.sagedining.com/microsites/getMenuItems?menuId=110277&date=11/14/2022&meal=Lunch"
 istheresomething = `false` // var for checking entree
 console.log(mylink) // printing in console link
 
@@ -310,11 +310,22 @@ console.log(mylink) // printing in console link
 $.get(mylink, function data(data) { // get request to retrive sage api
  istheresomething = `true`
 
+const myJSON = JSON.stringify(data);
+if (myJSON.indexOf("array") !== -1){
+console.log("NO SCHOOL")
+window.location.href = "https://food.jackunderwood.org/welpgeegoshthereisnoschooltodayandyourbeingabitoddbycheckingthelunchmenuwhenthereisnoschoollikewhodoesthat";
+}else{
+console.log("SCHOOL!")
+}
+
+
  // All the code below goes through the JSON file then displays it on the website
 
 //special
- var special = `${data.Specials[0]?.name}`
+var special = `${data.Specials[0]?.name}`
 //main
+
+// what this does is look through the json file then sets it to a varible
 var main0 = `${data["Entrées"][0]?.name}`
 var maining0 = `${data["Entrées"][0]?.displayStation}`
 var main1 = `${data["Entrées"][1]?.name}`
@@ -347,15 +358,6 @@ var side9 = `${data["Sides and Vegetables"][9]?.name}`
 var sideing9 = `${data["Sides and Vegetables"][9]?.displayStation}`
 
 
-//special
-if (special === "undefined"){
-  ("There is no special")
-} else {
-  console.log("Special Found! (" + special + ")");
-  $(".special").html(special);
-  $(".specialtitle").html("Today's Special is");
-}
-
 // Deli and Soup
 var soup0 = `${data.Soups[0]?.name}`
 var souping0 = `${data.Soups[0]?.displayStation}`
@@ -372,48 +374,102 @@ var deliing3 = `${data.Deli[3]?.displayStation}`
 var deli4 = `${data.Deli[4]?.name}`
 var deliing4 = `${data.Deli[4]?.displayStation}`
 
+//special
+if (special === "undefined"){
+  ("There is no special")
+} else {
+  console.log("Special Found! (" + special + ")");
+  $(".special").html(special);
+  $(".specialtitle").html("Today's Special is");
+}
+
 //main
-$(".main0").html(main0);
-$(".maining0").html(maining0);
-$(".main1").html(main1);
-$(".maining1").html(maining1);
-$(".main2").html(main2);
-$(".maining2").html(maining2);
-$(".main3").html(main3);
-$(".maining3").html(maining3);
+
+if (main0 === "undefined"){
+  $( "#main0hr" ).remove();
+} else {
+  $(".main0").html(main0);
+  $(".maining0").html(maining0);
+}
+if (main1 === "undefined"){
+  $( "#main1hr" ).remove();
+} else {
+  $(".main1").html(main1);
+   $(".maining1").html(maining1);
+}
+if (main2 === "undefined"){
+  $( "#main2hr" ).remove();
+} else {
+  $(".main2").html(main2);
+  $(".maining2").html(maining2);
+}
+if (main3 === "undefined"){
+  $( "#main3hr" ).remove();
+} else {
+  $(".main3").html(main3);
+  $(".maining3").html(maining3);
+}
+
 
 //sides
-$(".side0").html(side0);
-$(".sideing0").html(sideing0);
-$(".side1").html(side1);
-$(".sideing1").html(sideing1);
-$(".side2").html(side2);
-$(".sideing2").html(sideing2);
-$(".side3").html(side3);
-$(".sideing3").html(sideing3);
-$(".side4").html(side4);
-$(".sideing4").html(sideing4);
-$(".side5").html(side5);
-$(".sideing5").html(sideing5);
-$(".side6").html(side6);
-$(".sideing6").html(sideing6);
 
-// sometimes the sides vary in amount so we to avoid it displaying undefined we check if there's no side if not we dont display anything
+if (side0 === "undefined"){
+  $( "#side0hr" ).remove();
+} else {
+  $(".side0").html(side0);
+  $(".sideing0").html(sideing0);
+}
+if (side1 === "undefined"){
+  $( "#side1hr" ).remove();
+} else {
+  $(".side1").html(side1);
+  $(".sideing1").html(sideing1);
+}
+if (side2 === "undefined"){
+  $( "#side2hr" ).remove();
+} else {
+  $(".side2").html(side2);
+  $(".sideing2").html(sideing2);
+}
+if (side3 === "undefined"){
+  $( "#side3hr" ).remove();
+} else {
+  $(".side3").html(side3);
+  $(".sideing3").html(sideing3);
+}
+if (side4 === "undefined"){
+  $( "#side4hr" ).remove();
+} else {
+  $(".side4").html(side4);
+  $(".sideing4").html(sideing4);
+}
+if (side5 === "undefined"){
+  $( "#side5hr" ).remove();
+} else {
+  $(".side5").html(side5);
+  $(".sideing5").html(sideing5);
+}
+if (side6 === "undefined"){
+  $( "#side6hr" ).remove();
+} else {
+  $(".side6").html(side6);
+  $(".sideing6").html(sideing6);
+}
 if (side7 === "undefined"){
-  
+  $( "#side7hr" ).remove();
 } else {
   $(".side7").html(side7);
   $(".sideing7").html(sideing7);
 }
 
 if (side8 === "undefined"){
-  
+  $( "#side8hr" ).remove();
 } else {
   $(".side8").html(side8);
   $(".sideing8").html(sideing8);
 }
 if (side9 === "undefined"){
-  
+  $( "#side9hr" ).remove();
 } else {
   $(".side9").html(side9);
   $(".sideing9").html(sideing9);
@@ -421,39 +477,66 @@ if (side9 === "undefined"){
 
 //Deli and Soup
 if (soup0 === "undefined"){
-  
+  $( "#soup0hr" ).remove();
 } else {
   $(".soup0").html(soup0);
   $(".souping0").html(souping0);
 }
 if (soup1 === "undefined"){
-  
+  $( "#soup1hr" ).remove();
 } else {
   $(".soup1").html(soup1);
   $(".souping1").html(souping1);
 }
-$(".soup0").html(soup0);
-$(".souping0").html(souping0);
-$(".deli0").html(deli0);
-$(".deliing0").html(deliing0);
-$(".deli1").html(deli1);
-$(".deliing1").html(deliing1);
-$(".deli2").html(deli2);
-$(".deliing2").html(deliing2);
-$(".deli3").html(deli3);
-$(".deliing3").html(deliing3);
-$(".deli4").html(deli4);
-$(".deliing4").html(deliing4);
+
+if (deli0 === "undefined"){
+  $( "#deli0hr" ).remove();
+} else {
+  $(".deli0").html(deli0);
+  $(".deliing0").html(deliing0);
+}
+
+if (deli1 === "undefined"){
+  $( "#deli1hr" ).remove();
+} else {
+  $(".deli1").html(deli1);
+  $(".deliing1").html(deliing1);
+}
+
+if (deli2 === "undefined"){
+  $( "#deli2hr" ).remove();
+} else {
+  $(".deli2").html(deli2);
+  $(".deliing2").html(deliing2);
+}
+
+if (deli3 === "undefined"){
+  $( "#deli3hr" ).remove();
+} else {
+  $(".deli3").html(deli3);
+  $(".deliing3").html(deliing3);
+}
+
+if (deli4 === "undefined"){
+  $( "#deli4hr" ).remove();
+} else {
+  $(".deli4").html(deli4);
+  $(".deliing4").html(deliing4);
+}
+
 
 // checks if entree is there so we can send a error if not
 
 if (main0 == "undefined"){
   console.log("The first Entree is Undefined")
+
 } else{
   console.log("The first Entree is Defined")
   
 }
+
 });
+
 </script>
 
 <script>
